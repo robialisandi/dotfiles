@@ -149,4 +149,13 @@ return {
       require("telescope").load_extension("file_browser")
     end,
   },
+
+  {
+    "LintaoAmons/easy-commands.nvim",
+    event = "VeryLazy",
+    opts = {},
+    dependencies = {
+      "NeogitOrg/neogit",
+    },
+  },
 }

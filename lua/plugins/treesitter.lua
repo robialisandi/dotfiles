@@ -32,6 +32,24 @@ return {
         "markdown_inline",
       },
     },
+    dependencies = {
+      -- https://github.com/windwp/nvim-ts-autotag
+      {
+        "windwp/nvim-ts-autotag",
+        opts = {
+          enable_close_on_slash = false,
+          filetype = {
+            "html",
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+            "vue",
+            "xml",
+          },
+        },
+      },
+    },
     config = function(_, opts)
       require("nvim-treesitter.configs").setup(opts)
 
