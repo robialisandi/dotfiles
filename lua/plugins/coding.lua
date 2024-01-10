@@ -1,4 +1,18 @@
 return {
+  -- Create annotations with one keybind, and jump your cursor in then inserted annotation
+  {
+    "danymat/neogen",
+    keys = {
+      {
+        "<leader>cc",
+        function()
+          require("neogen").generate({})
+        end,
+        desc = "Neogen Comment",
+      },
+    },
+    opts = { snippet_engine = "luasnip" },
+  },
   -- Symbol Outline
   {
     "simrat39/symbols-outline.nvim",
@@ -13,15 +27,33 @@ return {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
     keywords = {
-      REVIEW = {
-        icon = " ",
+      NOTE = {
+        alt = { "REVIEW" },
       },
     },
+    merge_keywords = true,
   },
   -- Inc Rename
   {
     "smjonas/inc-rename.nvim",
     cmd = "InRename",
     config = true,
+  },
+  -- Refactoring tool
+  {
+    "ThePrimeagen/refactoring.nvim",
+    keys = {
+      {
+        "<leader>r",
+        function()
+          require("refactoring").select_refactor()
+        end,
+        mode = "v",
+        noremap = true,
+        silent = true,
+        expr = false,
+      },
+    },
+    opts = {},
   },
 }
