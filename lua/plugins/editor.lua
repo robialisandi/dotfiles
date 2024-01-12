@@ -71,6 +71,34 @@ return {
         end,
       },
       {
+        ";h",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.git_bcommits({
+            git_command = {
+              "git",
+              "log",
+              "--date=format:%d/%m/%y",
+              "--pretty=%C(auto) %h %ad %an, %s",
+            },
+          })
+        end,
+      },
+      {
+        ";g",
+        function()
+          local builtin = require("telescope.builtin")
+          builtin.git_commits({
+            git_command = {
+              "git",
+              "log",
+              "--date=format:%d/%m/%y",
+              "--pretty=%C(auto) %h %ad %an, %s",
+            },
+          })
+        end,
+      },
+      {
         "sf",
         function()
           local telescope = require("telescope")

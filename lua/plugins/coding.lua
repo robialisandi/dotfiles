@@ -26,12 +26,23 @@ return {
   {
     "folke/todo-comments.nvim",
     dependencies = { "nvim-lua/plenary.nvim" },
-    keywords = {
-      NOTE = {
-        alt = { "REVIEW" },
+    opts = {
+      keywords = {
+        TODO = {
+          alt = { "REVIEW" },
+        },
+        PERF = {
+          color = "perk",
+        },
+      },
+      merge_keywords = true,
+      colors = {
+        error = { "#ba2020" },
+        info = { "#2460e3" },
+        hint = { "#1ac75f" },
+        perk = { "#6a46fa" },
       },
     },
-    merge_keywords = true,
   },
   -- Inc Rename
   {
