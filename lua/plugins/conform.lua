@@ -65,18 +65,18 @@ return {
       ---@type table<string, conform.FormatterConfigOverride|fun(bufnr: integer): nil|conform.FormatterConfigOverride>
       formatters = {
         injected = { options = { ignore_error = true } },
-        ["blade-formatter"] = {
-          prepend_args = { "--sort-classes", "--wrap-attributes", "force-expand-multiline" },
-        },
-        blade = {
-          meta = {
-            url = "https://github.com/shufo/blade-formatter",
-            description = "An opinionated blade template formatter for Laravel that respects readability.",
-          },
-          command = "balde-formatter",
-          args = { "--stdin" },
-          stdin = true,
-        },
+        -- ["blade-formatter"] = {
+        --   prepend_args = { "--sort-classes", "--wrap-attributes", "auto" },
+        -- },
+        -- blade = {
+        --   meta = {
+        --     url = "https://github.com/shufo/blade-formatter",
+        --     description = "An opinionated blade template formatter for Laravel that respects readability.",
+        --   },
+        --   command = "balde-formatter",
+        --   args = { "--stdin" },
+        --   stdin = true,
+        -- },
         pint = {
           meta = {
             url = "https://github.com/laravel/pint",

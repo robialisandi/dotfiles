@@ -1,0 +1,97 @@
+{
+  "colors.enable": true,
+  "coc.preferences.formatOnSave": false,
+
+  // Volar-tool
+  "volar.enable": true,
+
+  // Suggestion ---------------------------
+  "suggest.noselect": false,
+  "suggest.floatConfig": {
+    "border": false,
+    "rounded": true,
+    "highlight": "CocFloating",
+    "shadow": true,
+    "winblend": 5,
+    "borderhighlight": "CocFloating"
+  },
+  "suggest.selection": "first",
+  "suggest.virtualText": false,
+  "suggest.formatItems": ["kind", "abbr", "menu", "shortcut"],
+  "suggest.completionItemKindLabels": {
+    "text": "Text",
+    "method": "Method",
+    "function": "Func",
+    "constructor": "Constructor",
+    "field": "Field",
+    "variable": "Var",
+    "class": "Class",
+    "interface": "Interface",
+    "module": "Module",
+    "property": "Prop",
+    "unit": "Unit",
+    "value": "Val",
+    "enum": "Enum",
+    "keyword": "Keyword",
+    "snippet": "Snip",
+    "color": "Color",
+    "file": "File",
+    "reference": "Ref",
+    "folder": "Folder",
+    "enumMember": "m",
+    "constant": "Const",
+    "struct": "Struct",
+    "event": "Event",
+    "operator": "Operator",
+    "typeParameter": "Type",
+    "default": ""
+  },
+  "hover.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+  "signature.floatConfig": {
+    "rounded": true,
+    "border": true
+  },
+
+  // diagnostic -------------------------
+  "diagnostic.infoSign": "🤔",
+  "diagnostic.warningSign": "🥺",
+  "diagnostic.errorSign": "🤬",
+  "diagnostic.hintSign": "💡",
+  "diagnostic.format": "%message [%source]",
+  "diagnostic.virtualTextPrefix": "■ ",
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextFormat": "%message [%source]",
+  "diagnostic.virtualTextCurrentLineOnly": false,
+  "diagnostic.enableMessage": "jump",
+  "diagnostic.floatConfig": {
+    "border": true,
+    "rounded": true
+  },
+
+  // Prettier ---------------------------
+  "prettier.semi": false,
+  "prettier.useEditorConfig": true,
+  "prettier.arrowParens": "avoid",
+  "prettier.vueIndentScriptAndStyle": true,
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "none",
+
+  // Blade formatter --------------------
+  "blade.bladeFormatter.optWrapLineLength": 120,
+  "blade.bladeFormatter.optSortHtmlAttributes": "vuejs",
+  "blade.bladeFormatter.optNoMultipleEmptyLines": true,
+  "blade.bladeFormatter.optWrapAttributes": "force-expand-multiline",
+  "blade.bladeLinter.enable": true,
+
+  // Java -------------------------------
+  "java.format.settings.url": "~/develop/java/formatter.xml",
+  "java.format.settings.profile": "Style",
+  "java.compile.nullAnalysis.mode": "automatic",
+  "inlayHint.enable": false,
+  "deno.enable": true,
+  "sumneko-lua.enableNvimLuaDev": true
+}

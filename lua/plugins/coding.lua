@@ -1,3 +1,38 @@
+-- Disabled autocomplete cmp
+local cmp = require("cmp")
+cmp.setup({
+  completion = {
+    autocomplete = false,
+  },
+  mapping = {
+    ["<C-Space>"] = cmp.mapping.complete(),
+  },
+  sources = cmp.config.sources({
+    { name = "codeium" },
+  }),
+  formatting = {
+    fields = { "kind", "abbr", "menu" },
+    format = function(entry, item)
+      item.menu = ({
+        codeium = "Codeium",
+        nvim_lsp = item.kind,
+        luasnip = "Snippet",
+        buffer = "Buffer",
+        path = "Path",
+      })[entry.source.name]
+      local icons = require("tvl.core.icons")
+      if icons.kinds[item.kind] then
+        item.kind = icons.kinds[item.kind]
+      end
+      if entry.source.name == "codeium" then
+        item.kind = icons.misc.codeium
+        item.kind_hl_group = "CmpItemKindVariable"
+      end
+      return item
+    end,
+  },
+})
+
 return {
   -- Create annotations with one keybind, and jump your cursor in then inserted annotation
   {
@@ -42,6 +77,15 @@ return {
         hint = { "#1ac75f" },
         perk = { "#6a46fa" },
       },
+    },
+  },
+  {
+    "folke/trouble.nvim",
+    enabled = true,
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    opts = {
+      position = "right",
+      height = 15,
     },
   },
   -- Inc Rename

@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 
 -- Define an autocmd group for the blade workaround
-local augroup = vim.api.nvim_create_augroup("lsp_blade_workaround", { clear = true })
+-- local augroup = vim.api.nvim_create_augroup("lsp_blade_workaround", { clear = true })
 
 -- Turn off paste mode when leaving insert
 vim.api.nvim_create_autocmd("InsertLeave", {
@@ -30,13 +30,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   group = TrimWhiteSpaceGrp,
 })
 -- Autocommand to temporarily change 'blade' filetype to 'php' when opening for LSP server activation
-vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
-  group = augroup,
-  pattern = "*.blade.php",
-  callback = function()
-    vim.bo.filetype = "php"
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufRead", "BufNewFile" }, {
+--   group = augroup,
+--   pattern = "*.blade.php",
+--   callback = function()
+--     vim.bo.filetype = "php"
+--   end,
+-- })
 
 -- Additional Autocommand to switch back to 'blade' after LSP has attached
 vim.api.nvim_create_autocmd("LspAttach", {
