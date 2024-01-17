@@ -63,8 +63,17 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
       keywords = {
+        FIX = {
+          alt = { "MYFIX" },
+        },
         TODO = {
-          alt = { "REVIEW" },
+          alt = { "MYTODO", "REVIEW" },
+        },
+        WARN = {
+          alt = { "MYWARN" },
+        },
+        NOTE = {
+          alt = { "MYNOTE" },
         },
         PERF = {
           color = "perk",
@@ -86,6 +95,7 @@ return {
     opts = {
       position = "right",
       height = 15,
+      width = 40,
     },
   },
   -- Inc Rename

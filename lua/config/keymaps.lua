@@ -10,6 +10,7 @@ local opts = { noremap = true, silent = true }
 
 -- Cummon custom
 keymap.set("i", "jk", "<ESC>")
+keymap.set("i", "kj", "<ESC>")
 
 -- Increment/decrement
 keymap.set("n", "+", "<C-a>")
@@ -46,6 +47,16 @@ keymap.set("n", "<C-w><left>", "<C-w><")
 keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
+
+-- Todo command
+keymap.set("n", "<leader>tt", ":TodoTrouble<Return>", { desc = "Todo all (root)" })
+keymap.set(
+  "n",
+  "<leader>tl",
+  ":TodoTrouble cwd=~/Work/talentics-dashboard/resources/js/vue-components<Return>",
+  { desc = "Todo talentics-dash vue" }
+)
+keymap.set("n", "<leader>tm", ":TodoTrouble keywords=MYNOTE,MYFIX,MYTODO,MYWARN<Return>", { desc = "My Todo" })
 
 -- Diagnostics
 keymap.set("n", "<C-j>", function()
