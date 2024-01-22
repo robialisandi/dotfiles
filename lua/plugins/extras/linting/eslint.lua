@@ -11,7 +11,7 @@ local codeActionsOnSave = settings["editor.codeActionsOnSave"] or {}
 local eslintFixAllOnSave = codeActionsOnSave["source.fixAll.eslint"]
 local useFlatConfig = settings["eslint.experimental.useFlatConfig"]
 
-vim.g.autoformat = formatOnSave
+-- vim.g.autoformat = formatOnSave
 
 return {
   { import = "lazyvim.plugins.extras.linting.eslint" },
