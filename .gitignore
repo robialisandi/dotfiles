@@ -1,3 +1,9 @@
+flutter
+filezilla
+configstore
+psysh
+micro
+
 tt.*
 .tests
 doc/tags
@@ -6,3 +12,4 @@ debug
 foo.*
 *.log
 data
+coc
