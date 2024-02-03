@@ -11,7 +11,7 @@
     "border": false,
     "rounded": true,
     "highlight": "CocFloating",
-    "shadow": true,
+    "shadow": false,
     "winblend": 5,
     "borderhighlight": "CocFloating"
   },
@@ -85,13 +85,13 @@
   "blade.bladeFormatter.optSortHtmlAttributes": "vuejs",
   "blade.bladeFormatter.optNoMultipleEmptyLines": true,
   "blade.bladeFormatter.optWrapAttributes": "force-expand-multiline",
-  "blade.bladeLinter.enable": true,
+  "blade.bladeLinter.enable": true
 
   // Java -------------------------------
-  "java.format.settings.url": "~/develop/java/formatter.xml",
-  "java.format.settings.profile": "Style",
-  "java.compile.nullAnalysis.mode": "automatic",
-  "inlayHint.enable": false,
-  "deno.enable": true,
-  "sumneko-lua.enableNvimLuaDev": true
+  // "java.format.settings.url": "~/develop/java/formatter.xml",
+  // "java.format.settings.profile": "Style",
+  // "java.compile.nullAnalysis.mode": "automatic",
+  // "inlayHint.enable": false,
+  // "deno.enable": true,
+  // "sumneko-lua.enableNvimLuaDev": true
 }

@@ -86,7 +86,7 @@ return {
     event = "VeryLazy",
     opts = function(_, opts)
       opts.scroll = {
-        enabled = false,
+        enabled = true,
       }
     end,
   },
